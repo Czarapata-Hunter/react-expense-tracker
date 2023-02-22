@@ -24,7 +24,6 @@ export default function ExpenseForm(props) {
 
   function titleChangeHandler(event) {
     setEnteredTitle(event.target.value);
-    console.log(event.target.value);
   }
 
   function amountChangeHandler(event) {
@@ -40,7 +39,7 @@ export default function ExpenseForm(props) {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
